@@ -38,7 +38,7 @@ jobs:
         run: |
           echo "Event: ${{toJson(github.event)}}"
 
-      - uses: google-github-actions/auth
+      - uses: google-github-actions/auth@v1
         with:
           service_account_email: ${{secrets.GCP_SA_EMAIL}}
           service_account_key: ${{secrets.GCP_SA_KEY}}
