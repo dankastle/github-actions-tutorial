@@ -28,4 +28,6 @@ jobs:
           echo "This is the value of region: ${{env.region}}"
           echo "This is the value of account: ${{env.account}}"
           
-          
+      - name: "Showing events"
+        run: |
+          echo "Event: ${{toJson(github.event)}}"
