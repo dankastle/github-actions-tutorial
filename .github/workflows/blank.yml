@@ -25,7 +25,7 @@ jobs:
         run: echo "Hello World"
 
       - name: "Show env vars"
-        if: ${{env.platform == 'gcp'}}
+      # if: ${{env.platform == 'gcp'}}
         run: |
           echo "This is the value of platform: ${{env.platform}}"
           echo "This is the value of region: ${{env.region}}"
