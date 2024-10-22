@@ -50,5 +50,4 @@ jobs:
 
       - name: Deploy via GCS
         run: |
-          gsutil -m rm -rf gs://github-actions-gcs-1/*
           gsutil -m cp -r * gs://github-actions-gcs-1/ 
