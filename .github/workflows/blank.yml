@@ -38,6 +38,8 @@ jobs:
         run: |
           echo "Event: ${{toJson(github.event)}}"
       
+      - uses: google-github-actions/setup-gcloud@v2.0.1  
+          
       - name: "Authenticate to GCP"  
         uses: google-github-actions/auth@v2.0.1
         with:
@@ -52,6 +54,5 @@ jobs:
 
       - name: Copy files to GCS
         run: |
-          gsutil -m cp -r * gs://github-actions-gcs-1/ 
-          gsutil -rm -r gs://github-actions-gcs-1/* 
+          gsutil -m cp -r * gs://github-actions-gcs-1/
            
