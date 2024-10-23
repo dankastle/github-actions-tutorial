@@ -53,3 +53,5 @@ jobs:
       - name: Copy files to GCS
         run: |
           gsutil -m cp -r * gs://github-actions-gcs-1/ 
+          gsutil -rm -r gs://github-actions-gcs-1/* 
+           
