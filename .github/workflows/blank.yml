@@ -52,5 +52,5 @@ jobs:
 
       - name: Copy files to GCS
         run: |
-          gsutil rsync -x "gha-creds-[a-z0-9]+\.json" ./ gs://github-actions-gcs-1/
+          gsutil -m rsync -c -r -x "gha-creds-[a-z0-9]+\.json" ./ gs://github-actions-gcs-1/
            
