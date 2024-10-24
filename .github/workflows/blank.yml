@@ -52,5 +52,5 @@ jobs:
 
       - name: Copy files to GCS
         run: |
-          gsutil -m cp -r * -x .*\.json$ gs://github-actions-gcs-1/
+          gsutil -m cp -r . gs://github-actions-gcs-1/ -x '.*\.json$'
            
