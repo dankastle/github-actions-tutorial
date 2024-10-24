@@ -52,5 +52,5 @@ jobs:
 
       - name: Copy files to GCS
         run: |
-          gsutil rsync -x ".*\.json$" gs://github-actions-gcs-1/
+          gsutil rsync -x ".*\.json$" * gs://github-actions-gcs-1/
            
